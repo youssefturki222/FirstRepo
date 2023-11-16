@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>895</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">  QMainWindow {
+            background-color: #f2f2f2;
+        }
+
+        QToolBar {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            spacing: 6px;
+        }
+
+        QToolBar QToolButton {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 6px;
+        }
+
+        QToolBar QToolButton:hover {
+            background-color: #555555;
+        }
+
+        QToolBar QToolButton:pressed {
+            background-color: #222222;
+        }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>60</y>
+      <width>411</width>
+      <height>331</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="id">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+            background-color: #303030;
+            color: #ffffff;
+            border: none;
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        QLineEdit:focus {
+            border: 2px solid #00a8e8;
+        }</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>90</y>
+      <width>365</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">color: #2C3E50;
+font-size:15px;
+font:bold;
+font-family : century gothic;</string>
+       </property>
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">color: #2C3E50;
+font-size:15px;
+font:bold;
+font-family : century gothic;</string>
+       </property>
+       <property name="text">
+        <string>Date de Signature</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDateEdit" name="dateSign">
+       <property name="styleSheet">
+        <string notr="true">QDateEdit {
+    background-color: #303030; /* Widget background color */
+    color: #ffffff; /* Widget text color */
+    border: none; /* Remove the default widget border */
+    padding: 8px; /* Set padding around the widget */
+    font-size: 14px; /* Set the font size */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+QDateEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 30px;
+    border: none; /* Remove the default drop-down button border */
+    background-color: transparent; /* Make the drop-down button transparent */
+}
+
+QDateEdit::drop-down:hover {
+    background-color: #393939; /* Drop-down button background color on hover */
+}
+
+QDateEdit::drop-down::icon {
+    image: url(:/icons/calendar_icon.png); /* Replace with your calendar icon */
+    width: 16px;
+    height: 16px;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">color: #2C3E50;
+font-size:15px;
+font:bold;
+font-family : century gothic;</string>
+       </property>
+       <property name="text">
+        <string>Date de Debut</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDateEdit" name="dateStart">
+       <property name="styleSheet">
+        <string notr="true">QDateEdit {
+    background-color: #303030; /* Widget background color */
+    color: #ffffff; /* Widget text color */
+    border: none; /* Remove the default widget border */
+    padding: 8px; /* Set padding around the widget */
+    font-size: 14px; /* Set the font size */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+QDateEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 30px;
+    border: none; /* Remove the default drop-down button border */
+    background-color: transparent; /* Make the drop-down button transparent */
+}
+
+QDateEdit::drop-down:hover {
+    background-color: #393939; /* Drop-down button background color on hover */
+}
+
+QDateEdit::drop-down::icon {
+    image: url(:/icons/calendar_icon.png); /* Replace with your calendar icon */
+    width: 16px;
+    height: 16px;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">color: #2C3E50;
+font-size:15px;
+font:bold;
+font-family : century gothic;</string>
+       </property>
+       <property name="text">
+        <string>Date de Fin</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDateEdit" name="dateEnd">
+       <property name="styleSheet">
+        <string notr="true">QDateEdit {
+    background-color: #303030; /* Widget background color */
+    color: #ffffff; /* Widget text color */
+    border: none; /* Remove the default widget border */
+    padding: 8px; /* Set padding around the widget */
+    font-size: 14px; /* Set the font size */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+QDateEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 30px;
+    border: none; /* Remove the default drop-down button border */
+    background-color: transparent; /* Make the drop-down button transparent */
+}
+
+QDateEdit::drop-down:hover {
+    background-color: #393939; /* Drop-down button background color on hover */
+}
+
+QDateEdit::drop-down::icon {
+    image: url(:/icons/calendar_icon.png); /* Replace with your calendar icon */
+    width: 16px;
+    height: 16px;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="type">
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    background-color: #303030; /* ComboBox background color */
+    color: #ffffff; /* ComboBox text color */
+    border: none; /* Remove the default ComboBox border */
+    padding: 8px; /* Set padding around the ComboBox */
+    font-size: 14px; /* Set the font size */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 30px;
+    border: none; /* Remove the default drop-down button border */
+    background-color: transparent; /* Make the drop-down button transparent */
+}
+
+QComboBox::drop-down:hover {
+    background-color: #393939; /* Drop-down button background color on hover */
+}
+
+QComboBox::drop-down::icon {
+    image: url(:/icons/arrow_down.png); /* Replace with your drop-down arrow icon */
+    width: 16px;
+    height: 16px;
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Choisir</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Type1</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>260</y>
+      <width>361</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="ajouter">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove the default button border */
+    padding: 10px 20px; /* Set padding around the button text */
+    font-size: 16px; /* Set the font size */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+QPushButton:hover {
+    background-color: #45a049; /* Button background color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #367dd39; /* Button background color when pressed */
+}</string>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="modifier">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #3498db; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove the default button border */
+    padding: 10px 20px; /* Set padding around the button text */
+    font-size: 16px; /* Set the font size */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+QPushButton:hover {
+    background-color: #2980b9; /* Button background color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #21618c; /* Button background color when pressed */
+}</string>
+       </property>
+       <property name="text">
+        <string>Modifier</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="supprimer">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #f44336; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove the default button border */
+    padding: 10px 20px; /* Set padding around the button text */
+    font-size: 16px; /* Set the font size */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+QPushButton:hover {
+    background-color: #e53935; /* Button background color on hover */
+}
+
+QPushButton:pressed {
+    background-color: #c62828; /* Button background color when pressed */
+}</string>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>10</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #2C3E50;
+font-size:15px;
+font:bold;
+font-family : century gothic;</string>
+    </property>
+    <property name="text">
+     <string>Contracts</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="conect">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>370</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+color:rgb(0, 170, 0);
+font-size:20px;
+font:bold;
+font-family : century gothic;
+}</string>
+    </property>
+    <property name="text">
+     <string>connection</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>30</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+            background-color: #303030;
+            color: #ffffff;
+            border: none;
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        QLineEdit:focus {
+            border: 2px solid #00a8e8;
+        }</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>30</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    background-color: #303030; /* ComboBox background color */
+    color: #ffffff; /* ComboBox text color */
+    border: none; /* Remove the default ComboBox border */
+    padding: 4px; /* Set padding around the ComboBox */
+    font-size: 14px; /* Set the font size */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    width: 30px;
+    border: none; /* Remove the default drop-down button border */
+    background-color: transparent; /* Make the drop-down button transparent */
+}
+
+QComboBox::drop-down:hover {
+    background-color: #393939; /* Drop-down button background color on hover */
+}
+
+QComboBox::drop-down::icon {
+    image: url(:/icons/arrow_down.png); /* Replace with your drop-down arrow icon */
+    width: 16px;
+    height: 16px;
+}</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Critere 1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Critere 2</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>895</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
